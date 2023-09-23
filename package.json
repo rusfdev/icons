@@ -8,7 +8,7 @@
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue ./",
     "test": "echo \"No test specified\" && exit 0",
-    "icongenerate": "icongenie generate -m pwa -i ./public/icon.png --png-color fff",
+    "icongenerate": "icongenie generate -m pwa -i ./public/icon.png",
     "dev": "quasar dev -m pwa",
     "build": "quasar build -m pwa"
   },
