@@ -66,7 +66,7 @@ module.exports = configure((/* ctx */) => ({
 
     // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
 
-    // publicPath: '/',
+    publicPath: '/icons/dist/pwa/',
     // analyze: true,
     // env: {},
     // rawDefine: {}
