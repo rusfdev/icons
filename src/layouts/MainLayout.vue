@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+    <q-header elevated :class="['header', { 'header--dark': $q.dark.isActive }]">
       <q-toolbar>
         <q-btn
           flat
@@ -49,6 +49,7 @@
 import { ref } from 'vue'
 import type { EssentialLinkProps } from 'components/EssentialLink.vue'
 import EssentialLink from 'components/EssentialLink.vue'
+import { useMeta, useQuasar } from 'quasar'
 
 const essentialLinks: EssentialLinkProps[] = [
   {
@@ -100,4 +101,32 @@ const leftDrawerOpen = ref(false)
 function toggleLeftDrawer() {
   leftDrawerOpen.value = !leftDrawerOpen.value
 }
+
+const $q = useQuasar()
+
+useMeta(() => {
+  const data = {
+    meta: {
+      themeColor: {
+        name: 'theme-color',
+        content: $q.dark.mode ? '1D1D1D' : 'fff',
+      },
+    },
+  }
+
+  console.log(data)
+
+  return data
+})
 </script>
+
+<style lang="scss" scoped>
+.header {
+  background-color: #fff !important;
+  color: $dark;
+  &--dark {
+    background-color: $dark !important;
+    color: #fff;
+  }
+}
+</style>

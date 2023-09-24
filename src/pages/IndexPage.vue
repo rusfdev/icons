@@ -1,5 +1,11 @@
 <template>
   <q-page class="row items-center justify-evenly">
+    <q-toggle
+      :model-value="$q.dark.isActive"
+      label="dark mode"
+      @update:model-value="$q.dark.toggle()"
+    />
+
     <example-component
       title="Example component"
       active

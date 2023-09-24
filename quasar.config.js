@@ -86,9 +86,7 @@ module.exports = configure((/* ctx */) => ({
   // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#devServer
   devServer: {
     // https: true
-    app: {
-      name: 'google chrome',
-    },
+    open: false,
   },
 
   // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#framework
@@ -106,7 +104,9 @@ module.exports = configure((/* ctx */) => ({
     // directives: [],
 
     // Quasar plugins
-    plugins: [],
+    plugins: [
+      'Meta',
+    ],
   },
 
   // animations: 'all', // --- includes all animations
@@ -149,7 +149,7 @@ module.exports = configure((/* ctx */) => ({
   // https://v2.quasar.dev/quasar-cli-vite/developing-pwa/configuring-pwa
   pwa: {
     workboxMode: 'generateSW', // or 'injectManifest'
-    injectPwaMetaTags: true,
+    injectPwaMetaTags: false,
     swFilename: 'sw.js',
     manifestFilename: 'manifest.json',
     useCredentialsForManifestTag: false,
