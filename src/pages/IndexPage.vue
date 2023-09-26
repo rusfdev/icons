@@ -1,5 +1,7 @@
 <template>
-  <q-page class="row items-center justify-evenly">
+  <q-page>
+    <pwa-message />
+
     <q-toggle
       :model-value="$q.dark.isActive"
       label="dark mode"
@@ -16,6 +18,7 @@
 </template>
 
 <script setup lang="ts">
+import PwaMessage from 'src/components/PwaMessage.vue'
 import type { Todo, Meta } from 'components/models'
 import ExampleComponent from 'components/ExampleComponent.vue'
 import { ref } from 'vue'

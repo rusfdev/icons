@@ -1,7 +1,8 @@
 {
   "name": "Кабінет продавця Gelius",
   "short_name": "Gelius",
-  "display": "fullscreen",
+  "display": "standalone",
+  "start_url": "/",
   "icons": [
     {
       "src": "/icons/icon-128x128.png",
